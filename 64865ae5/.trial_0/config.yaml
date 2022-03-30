@@ -1,0 +1,91 @@
+# TorchImageClassificationCfg
+augmentation:
+  auto_augment: null
+  color_jitter: 0.4
+  cutmix: 0.0
+  cutmix_minmax: null
+  drop: 0.0
+  drop_block: null
+  drop_path: null
+  hflip: 0.5
+  mixup: 0.0
+  mixup_mode: batch
+  mixup_off_epoch: 0
+  mixup_prob: 1.0
+  mixup_switch_prob: 0.5
+  no_aug: false
+  ratio: !!python/tuple
+  - 0.75
+  - 1.3333333333333333
+  scale: !!python/tuple
+  - 0.08
+  - 1.0
+  smoothing: 0.1
+  train_interpolation: random
+  vflip: 0.0
+data:
+  crop_pct: 0.99
+  img_size: null
+  input_size: null
+  interpolation: ''
+  mean: null
+  std: null
+  validation_batch_size_multiplier: 1
+gpus: !!python/tuple []
+img_cls:
+  global_pool_type: null
+  model: resnet50d
+  pretrained: true
+misc:
+  amp: false
+  apex_amp: false
+  eval_metric: top1
+  log_interval: 50
+  native_amp: false
+  num_workers: 2
+  pin_mem: false
+  prefetcher: false
+  save_images: false
+  seed: 278
+  torchscript: false
+  tta: 0
+  use_multi_epochs_loader: false
+model_ema:
+  model_ema: true
+  model_ema_decay: 0.9998
+  model_ema_force_cpu: false
+optimizer:
+  clip_grad: null
+  clip_mode: norm
+  momentum: 0.9
+  opt: sgd
+  opt_betas: null
+  opt_eps: null
+  weight_decay: 0.0001
+train:
+  batch_size: 8
+  bn_eps: null
+  bn_momentum: null
+  cooldown_epochs: 10
+  decay_epochs: 30
+  decay_rate: 0.1
+  early_stop_baseline: -.inf
+  early_stop_max_value: .inf
+  early_stop_min_delta: 0.001
+  early_stop_patience: 20
+  epochs: 150
+  lr: 0.001
+  lr_cycle_limit: 1
+  lr_cycle_mul: 1.0
+  lr_noise: null
+  lr_noise_pct: 0.67
+  lr_noise_std: 1.0
+  min_lr: 1.0e-05
+  output_lr_mult: 0.1
+  patience_epochs: 10
+  sched: step
+  start_epoch: 0
+  sync_bn: false
+  transfer_lr_mult: 0.01
+  warmup_epochs: 3
+  warmup_lr: 0.0001
